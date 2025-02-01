@@ -10,3 +10,5 @@ By incorporating features such as secure user authentication, structured data st
 this project exemplifies the potential of technology to improve pet care and foster stronger bonds between pets and their owners.
 
 
+RESULTS:
+https://github.com/SanikaHegde/Fursteps-pet-wellness-tracker/blob/423e26a1a2436def7026ee085aaf1fbc2036d82c/Screenshot%202024-12-27%20221940.png
