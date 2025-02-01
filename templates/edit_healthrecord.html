@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}
+Appointment Management
+{% endblock title %}
+
+{% block body %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <br>
+            <h4 class="text-center bg-success text-white"> Add Contact Details</h4>
+            <br>
+            <form action="/edit/health/{{ post.record_id }}" method="post">
+                <!-- {{ post.ap_id }} -->
+                <div class="mb-3">
+                    <label for="record_id" class="form-label">RECORD ID</label>
+                    <input type="text" class="form-control" id="record_id" name="record_id" placeholder="record_id" value="{{ post.record_id }}" required readonly>
+                </div>
+                <div class="mb-3">
+                    <label for="pet_id" class="form-label">Pet ID</label>
+                    <input type="text" class="form-control" id="pet_id" name="pet_id" placeholder="pet_id" value="{{ post.pet_id }}" required >
+                </div>
+                <div class="mb-3">
+                    <label for="vaccination" class="form-label">VACCINATION</label>
+                    <input type="text" class="form-control" id="vaccination" name="vaccination" placeholder="vaccination" value="{{post.vaccination}}" required>
+                </div>
+                
+                
+                <div class="mb-3">
+                    <label for="medication" class="form-label">MEDICATION</label>
+                    <input type="text" class="form-control" id="medication" name="medication" placeholder="medication" value="{{post.medication}}" required>
+                </div>
+                <div class="mb-3">
+                    <label for="medical_history" class="form-label">MEDICAL_HISTORY</label>
+                    <input type="text" class="form-control" id="medical_history" name="medical_history" placeholder="medical_history" value="{{post.medical_history}}" required>
+                </div>
+
+                
+                <button type="submit" class="btn btn-primary">Add health details</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock body %}

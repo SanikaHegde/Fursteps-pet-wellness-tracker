@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}
+Appointment Management
+{% endblock title %}
+
+{% block body %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <br>
+            <h4 class="text-center bg-success text-white"> Add Nutrition and Diet Details</h4>
+            <br>
+            <form action="/edit/nutrition/{{ post.nutrition_diet_id }}" method="post">
+                <!-- {{ post.ap_id }} -->
+                <div class="mb-3">
+                    <label for="pet_id" class="form-label">Pet ID</label>
+                    <input type="text" class="form-control" id="pet_id" name="pet_id" placeholder="pet_id" value="{{ post.pet_id }}" required >
+                </div>
+                <div class="mb-3">
+                    <label for="diet_plan" class="form-label">Diet plan</label>
+                    <input type="text" class="form-control" id="diet_plan" name="diet_plan" placeholder="diet_plan" value="{{ post.diet_plan }}" required >
+                </div>
+                <div class="mb-3">
+                    <label for="requirements" class="form-label">Requirements</label>
+                    <input type="text" class="form-control" id="requirements" name="requirements" placeholder="requirements" value="{{post.requirements}}" required>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Add Nutrition Details  </button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock body %}

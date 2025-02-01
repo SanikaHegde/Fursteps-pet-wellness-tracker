@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+        
+     Contact   VIEW
+{% endblock title %}
+
+{% block body %}
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">CONTACT_ID</th>
+        <th scope="col">PET_RELATION</th>
+        <th scope="col">NAME</th>
+        <th scope="col">PET_ID</th>
+        <th scope="col">PHONE</th>
+        <th scope="col">EDIT</th>
+        <th scope="col">DELETE</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for  co in contact %}
+      <tr>
+        <th scope="row">{{co.contact_id}}</th>
+        <td>{{co.pet_relation}}</td>
+        <td>{{co.name}}</td>
+        <td>{{co.pet_id}}</td>
+        <td>{{co.phone}}</td>
+        <td><a href="/edit/contact/{{co.contact_id}}"><button class="btn btn-primary"> Edit </button></a> </td>
+        <td><a href="/delete/contact/{{co.contact_id}}"><button onclick="return confirm('Are you sure to delete data');" class="btn btn-danger">Delete</button></a></td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+{% endblock body %}

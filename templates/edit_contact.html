@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}
+Appointment Management
+{% endblock title %}
+
+{% block body %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <br>
+            <h4 class="text-center bg-success text-white"> Add Contact Details</h4>
+            <br>
+            <form action="/edit/contact/{{ post.contact_id }}" method="post">
+                <!-- {{ post.ap_id }} -->
+                <div class="mb-3">
+                    <label for="contact_id" class="form-label">CONTACT ID</label>
+                    <input type="text" class="form-control" id="contact_id" name="contact_id" placeholder="contact_id" value="{{ post.contact_id }}" required readonly>
+                </div>
+                <div class="mb-3">
+                    <label for="pet_realtion" class="form-label">PET Relation</label>
+                    <input type="text" class="form-control" id="pet_relation" name="pet_relation" placeholder="pet_relation" value="{{post.pet_relation}}" required>
+                </div>
+                <div class="mb-3">
+                    <label for="pet_id" class="form-label">Pet ID</label>
+                    <input type="text" class="form-control" id="pet_id" name="pet_id" placeholder="pet_id" value="{{ post.pet_id }}" required >
+                </div>
+                
+                <div class="mb-3">
+                    <label for="phone" class="form-label">PHONE</label>
+                    <input type="text" class="form-control" id="phone" name="phone" placeholder="phone" value="{{post.phone}}" required>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Add Contact</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock body %}

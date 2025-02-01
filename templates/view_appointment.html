@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+        
+     view   VIEW
+{% endblock title %}
+
+{% block body %}
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">APPOINTMENT_ID</th>
+        <th scope="col">PET_ID</th>
+        <th scope="col">DATE</th>
+        <th scope="col">PURPOSE</th>
+        <th scope="col">NOTES</th>
+        <th scope="col">EDIT</th>
+        <th scope="col">DELETE</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for  ap in appointment %}
+      <tr>
+        <th scope="row">{{ap.ap_id}}</th>
+        <td>{{ap.pet_id}}</td>
+        <td>{{ap.date}}</td>
+        <td>{{ap.purpose}}</td>
+        <td>{{ap.notes}}</td>
+        <td><a href="/edit/appointment/{{ap.ap_id}}"><button class="btn btn-primary"> Edit </button></a> </td>
+        <td><a href="/delete/appointment/{{ap.ap_id}}"><button onclick="return confirm('Are you sure to delete data');" class="btn btn-danger">Delete</button></a></td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+{% endblock body %}

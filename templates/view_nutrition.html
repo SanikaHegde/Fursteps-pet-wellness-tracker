@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+        
+     Contact   VIEW
+{% endblock title %}
+
+{% block body %}
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">NUTRITION_DIET_ID</th>
+        <th scope="col">PET_ID</th>
+        <th scope="col">DIET_PLAN</th>
+        <th scope="col">REQUIRMENTS</th>
+        <th scope="col">EDIT</th>
+        <th scope="col">DELETE</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for  nu in nutrition %}
+      <tr>
+        <th scope="row">{{nu.nutrition_diet_id}}</th>
+        <td>{{nu.pet_id}}</td>
+        <td>{{nu.diet_plan}}</td>
+        <td>{{nu.requirements}}</td>
+        
+        <td><a href="/edit/nutrition/{{nu.nutrition_diet_id}}"><button class="btn btn-primary"> Edit </button></a> </td>
+        <td><a href="/delete/nutrition/{{nu.nutrition_diet_id}}"><button onclick="return confirm('Are you sure to delete data');" class="btn btn-danger">Delete</button></a></td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+{% endblock body %}

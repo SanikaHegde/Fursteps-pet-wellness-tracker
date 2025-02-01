@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}
+Appointment Management
+{% endblock title %}
+
+{% block body %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <br>
+            <h4 class="text-center bg-success text-white"> Add Appointment Details</h4>
+            <br>
+            <form action="/edit/appointment/{{ post.ap_id }}" method="post">
+                <!-- {{ post.ap_id }} -->
+                <div class="mb-3">
+                    <label for="ap_id" class="form-label">AP ID</label>
+                    <input type="text" class="form-control" id="ap_id" name="ap_id" placeholder="ap_id" value="{{ post.ap_id }}" required readonly>
+                </div>
+                <div class="mb-3">
+                    <label for="pet_id" class="form-label">Pet ID</label>
+                    <input type="text" class="form-control" id="pet_id" name="pet_id" placeholder="pet_id" value="{{ post.pet_id }}" required >
+                </div>
+                <div class="mb-3">
+                    <label for="date" class="form-label">Date</label>
+                    <input type="text" class="form-control" id="date" name="date" placeholder="date" value="{{post.date}}" required>
+                </div>
+                <div class="mb-3">
+                    <label for="purpose" class="form-label">Purpose</label>
+                    <input type="text" class="form-control" id="purpose" name="purpose" placeholder="purpose" value="{{post.purpose}}" required>
+                </div>
+                <div class="mb-3">
+                    <label for="notes" class="form-label">Notes</label>
+                    <input type="text" class="form-control" id="notes" name="notes" placeholder="notes" value="{{post.notes}}" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Add Appointment</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock body %}
