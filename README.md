@@ -12,3 +12,4 @@ this project exemplifies the potential of technology to improve pet care and fos
 
 RESULTS:
 
+![image alt](https://github.com/SanikaHegde/Fursteps-pet-wellness-tracker/blob/d3bcfb4f8f88747e3156253eac685963f2af0227/Screenshot%202024-12-27%20221940.png )
