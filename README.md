@@ -1,6 +1,6 @@
 # FurSteps Pet Wellness Tracking Management System 🐾        
 
-In recent years, the importance of organized and comprehensive pet care has grown significantly, driven by the increasing number of pet owners and their desire to ensure optimal health and well-being for their furry companions.  
+In recent years, the importance of organized and comprehensive pet care has grown significantly, driven by the increasing number of pet owners and their desire to ensure optimal health and well-being for their furry companions.   
 
 The **FurSteps Wellness Tracker Management System** is designed to address this need by providing a centralized and user-friendly platform for managing all aspects of pet wellness.  
 ---
